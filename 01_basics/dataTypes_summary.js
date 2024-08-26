@@ -1,4 +1,4 @@
-//  Primitive
+//  Primitive //stored in stack
 
 //  7 types : String, Number, Boolean, null, undefined, Symbol, BigInt
 // JavaScript is a dynamically-typed language. 
@@ -21,7 +21,7 @@ console.log(id === anotherId);
 // undefined => typeof = undefined
 
 
-// Reference (Non primitive)
+// Reference (Non primitive) //stored in heap
 
 // Array, Objects, Functions
 
@@ -36,5 +36,12 @@ const myFunction = function(){
 }
 
 console.log(typeof anotherId);
+
+let nameOne ="anan"
+let anotherName = nameOne;
+nameOne = "rehmat";
+console.log(nameOne); //rehmat
+console.log(anotherName); //anan
+
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
