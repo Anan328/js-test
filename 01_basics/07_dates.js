@@ -29,7 +29,9 @@ const newDate = new Date();
 console.log(newDate.toLocaleString('default',{
     weekday:"long"
 }));
-
+console.log(newDate.toLocaleDateString("en-US", {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  }))
 
 
 
