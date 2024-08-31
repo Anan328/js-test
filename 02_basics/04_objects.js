@@ -44,8 +44,21 @@ const users=[
     }
 ]
 
-console.log(users[1].email);
+// console.log(users[1].email);
 // console.log(Object.keys(user));
 // console.log(Object.values(user));
 //console.log(Object.entries(user)); // Converts the 'user' object into an array of key-value pairs
 //console.log(user.hasOwnProperty('isLoggedIn')); // true
+
+//################# object destructuring #################
+
+const course={
+    courseName :"JS",
+    price:"999",
+    courseInstructor:"albert"
+}
+
+// const {courseInstructor}=course;
+const {courseInstructor:instuctor}=course; // assigning custom name 
+
+console.log(instuctor);
