@@ -7,7 +7,7 @@ console.log(a); //0
 
 
 
-console.log(addone(5)) //correct
+console.log(addone(5)) //correct //hoisting 
 
 function addone(num){
     return num + 1
@@ -15,7 +15,7 @@ function addone(num){
 
 
 
-// addTwo(5) //error because function is stored in a variable
+// addTwo(5) //not hoisted //error because function is stored in a variable
 const addTwo = function(num){
     return num + 2
 }
