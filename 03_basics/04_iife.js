@@ -4,6 +4,11 @@
 // Syntax: The function is enclosed in parentheses () to treat it as an expression, followed by another () to invoke it.
 
 (function chai(){
-    console.log('connected to database');
+    //named IIFE
+    console.log('connected to database 1');
     
-})()
+})(); // ; is necessary here
+
+( (name)=> {
+    console.log(`connected to database 2, ${name}`);
+} )('anaan');
