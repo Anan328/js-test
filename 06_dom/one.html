@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning for JS<span style="display: none;">test</span>
+        </h1>
+        <!-- innerText: gets/sets visible text, respects CSS styling (e.g., hidden elements) -->
+        <!-- textContent: gets/sets all text content, including hidden elements, without HTML parsing -->
+         <h2>lorem ipsum</h2>
+         <h2>lorem ipsum</h2>
+         <h2 id="lorem">lorem ipsum</h2>
+         <h2>lorem ipsum</h2>
+         <h2>lorem ipsum</h2>
+         <div>
+            <p>Lorem ipsum dolor sit, amet.</p>
+            <p>ipsum dolor</p>
+         </div>
+        
+        <input type="password" name="pwd" id="fashion">
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+            <li class="list-item">five</li>
+        </ul>
+        <!--
+Arrays:
+- JavaScript objects used to store multiple values in a single variable.
+- Supports various methods (e.g., map, filter, reduce).
+- Example: let arr = [1, 2, 3, 4];
+
+NodeList:
+- A collection of nodes returned by methods like document.querySelectorAll().
+- Static or live, depending on the method used.
+- Lacks many array methods (e.g., map, filter), but can be converted to an array.
+- Example: let nodeList = document.querySelectorAll('p');
+
+HTMLCollection:
+- A collection of HTML elements returned by methods like getElementsByTagName() or getElementsByClassName().
+- Live or static, depending on the method used.
+- Similar to NodeList but specifically for HTML elements.
+- Example: let htmlCollection = document.getElementsByTagName('p');
+- Use Array.from() to create a new Array instance from an HTMLCollection.
+-->
+
+    </div>
+    <script>
+        // document.querySelector('#title')
+        // document.querySelector('.heading')
+        // document.querySelector('input[type="text"]') // selects input with type = text
+        // document.querySelector('input').type="text" // modifies the type to text
+        // document.querySelector('p:first-child') //only works if  it is literally the first child of its parent container.
+    </script>
+</body>
+</html>
