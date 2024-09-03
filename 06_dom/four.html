@@ -4,8 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    
+    <ul class="language">
+        <li>javaScript</li>
+    </ul>
+    <script>
+        function addList(name){
+            let ul = document.querySelector("ul")
+            let list = document.createElement("li");
+            list.innerText = name;
+            ul.appendChild(list);   
+        }
+        addList("Java");
+
+        // above method is not optimizable
+        function addoptList(name){
+            let list = document.createElement("li");
+            list.appendChild(document.createTextNode(name));
+            document.querySelector('.language').appendChild(list);
+        }
+        addoptList('typeScript');
+        // Edit
+        const edit = (name)=>{
+            const lang = document.querySelector('li:nth-child(2)');
+            //lang.innerHTML = name;
+            const li = document.createElement('li');
+            li.textContent = name;
+            lang.replaceWith(li);
+        }
+        edit("Django");
+        const remove = ()=>{
+            const lang = document.querySelector('li:nth-child(2)');
+            lang.remove();
+        }
+        remove();
+    </script>
 </body>
 </html>
