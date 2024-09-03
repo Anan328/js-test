@@ -19,6 +19,50 @@
    </div>
 </body>
 <script>
+    // attachEven() , used in internetexplorer
+    // Jquery -> onEvent()
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+    //   document.getElementById('owl').onclick = ()=>{
+    //     alert('clicked');
+    //   };
+
+    // document.getElementById('owl').addEventListener('click',()=>{
+    //        alert('clicked');
+    // })
+
+    // document.getElementById('images').addEventListener('click',(e)=>{
+    //        console.log('clicked inside the ul');
+           
+    // },true) // 'true' enables capture phase, events go top-down
+
+    // document.getElementById('owl').addEventListener('click',(e)=>{
+    //        console.log('owl clicked');  
+    //        e.stopPropagation(); // Stops the event from bubbling or capturing to parent elements   
+    // },true)
+
+    // document.getElementById('google')
+    // .addEventListener('click',function (e){
+    //     e.preventDefault();
+    //     console.log('google clicked'); 
+    // },false)
+    
+    const x = document.querySelector('#images')
+    .addEventListener('click',(e)=>{
+        // console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if(e.target.tagName==='IMG'){
+            // console.log(e.target);
+            const removeIt = e.target.parentNode;
+            removeIt.remove() 
+            // we can use both ways to remove
+            // removeIt.parentNode.removeChild(removeIt)
+        }
+        
+          
+    })
 
 </script>
 </html>
