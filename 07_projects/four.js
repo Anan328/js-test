@@ -5,6 +5,7 @@ const lastResult = document.getElementsByClassName('lastResult')[0];
 const hint = document.getElementsByClassName('lowOrHi')[0];
 const random = Math.floor(Math.random()*100+1);
 console.log(random);
+const guessList = [];
 submit.addEventListener('click',(e)=>{
     e.preventDefault();
     const text = document.getElementById('guessField').value;
@@ -29,7 +30,8 @@ submit.addEventListener('click',(e)=>{
       lastResult.innerHTML = String(newResult);
       result.innerHTML = 'Ah auu!! wrong guess';
       result.style.backgroundColor = "red";
-      previousGuess.innerHTML = text;
+      guessList.push(text)
+      previousGuess.innerHTML = guessList;
       if(newResult==0){
         alert("You lost all the guesses!!, play again");
         result.innerHTML = 'You lost all the guesses!!';
