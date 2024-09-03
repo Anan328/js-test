@@ -2,6 +2,7 @@ const submit = document.querySelector('#subt');
 const result = document.getElementById('result');
 const previousGuess = document.getElementsByClassName("guesses")[0];
 const lastResult = document.getElementsByClassName('lastResult')[0];
+const hint = document.getElementsByClassName('lowOrHi')[0];
 const random = Math.floor(Math.random()*100+1);
 console.log(random);
 submit.addEventListener('click',(e)=>{
@@ -18,6 +19,11 @@ submit.addEventListener('click',(e)=>{
       },100)
       
     }else if(random != text && text!=""){
+      if(text < random){
+            hint.innerHTML = "Number is too low!!"
+      }else{
+            hint.innerHTML = "Number is too high!!"
+      }
       newResult=newResult-1;
       //console.log(newResult);
       lastResult.innerHTML = String(newResult);
