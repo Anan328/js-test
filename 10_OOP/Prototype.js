@@ -1,3 +1,5 @@
+// Prototypes are objects from which other objects inherit properties and methods.
+
 // let myName = "hitesh     "
 // let mychannel = "chai     "
 
