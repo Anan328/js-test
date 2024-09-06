@@ -20,22 +20,27 @@ console.log(userOne.encryptPassword());
 console.log(userOne.changeUsername());
 console.log(userOne.hashPassword());
 
+// behind the scene
 
-function User(username, email, password){
+function UserAlt(username, email, password){
     this.username = username;
     this.email = email;
     this.password = password
 }
 
-User.prototype.encryptPassword = function(){
+UserAlt.prototype.encryptPassword = function(){
     return `${this.password}abc`
 }
-User.prototype.changeUsername = function(){
+UserAlt.prototype.changeUsername = function(){
     return `${this.username.toUpperCase()}`
 }
 
+UserAlt.prototype.hashPassword = function(){ 
+    return `@#$%%$${this.password}djnencn`;
+}
 
-const tea = new User("tea", "tea@gmail.com", "123")
+const tea = new UserAlt("tea", "tea@gmail.com", "123")
 
 console.log(tea.encryptPassword());
 console.log(tea.changeUsername());
+console.log(tea.hashPassword());
